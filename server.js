@@ -10,7 +10,7 @@ server.get('/', (req, res) => {
 
 // 1. logger logs to the console the following information about each request: request method, request url, and a timestamp. This middleware runs on every request made to the API
 function logger(req, res, next) {
-
+  console.log(`Request Method: ${req.method}, Request URL:${req.originalURL}, Timestamp: ${Date.now()}`)
 };
 
 // 2. validates the user id on every request that expects a user id parameter
