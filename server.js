@@ -8,7 +8,23 @@ server.get('/', (req, res) => {
 
 //custom middleware
 
+// 1. logger logs to the console the following information about each request: request method, request url, and a timestamp. This middleware runs on every request made to the API
 function logger(req, res, next) {
+
+};
+
+// 2. validates the user id on every request that expects a user id parameter
+function validateUserId(req, res, next) {
+
+};
+
+// 3. validates the body on a request to create a new user
+function validateUser(req, res, next) {
+
+};
+
+// 4. validates the body on a request to create a new post
+function validatePost(req, res, next) {
 
 };
 
