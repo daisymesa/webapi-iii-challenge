@@ -15,7 +15,11 @@ function logger(req, res, next) {
 
 // 2. validates the user id on every request that expects a user id parameter
 function validateUserId(req, res, next) {
-
+  if(req.params.id) {
+    next();
+  } else {
+    res.status(400).json({ message: 'Invalid User ID'})
+  }
 };
 
 // 3. validates the body on a request to create a new user
